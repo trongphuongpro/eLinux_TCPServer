@@ -1,7 +1,7 @@
 /**
  * @file tcpserver.cpp
- * @brief 
- * @author Nguyen Trong Phuong
+ * @brief Wrapper class for Server-side of TCP/IPv4 socket connection.
+ * @author Nguyen Trong Phuong (aka trongphuongpro)
  * @date 2020 Jan 28
  */
 
@@ -40,18 +40,19 @@ int TCPServer::open() {
 		return -1;
 	}
 
-	memset(&this->server, 0, sizeof(this->server));
-	this->server.sin_family = AF_INET;
-	this->server.sin_addr.s_addr = INADDR_ANY;
-	this->server.sin_port = htons(this->port);
+	struct sockaddr_in server;
+	memset(&server, 0, sizeof(server));
+	server.sin_family = AF_INET;
+	server.sin_addr.s_addr = INADDR_ANY;
+	server.sin_port = htons(this->port);
 
-	if (bind(this->socketfd, (struct sockaddr*)&this->server,
-							sizeof(this->server)) < 0) {
+	if (bind(this->socketfd, (struct sockaddr*)&server,
+							sizeof(struct sockaddr)) < 0) {
 		perror("TCPServer: error on binding the socket");
 		return -1;
 	}
 
-	::listen(this->socketfd, 255);
+	::listen(this->socketfd, 128);
 
 	return 0;
 }
@@ -87,7 +88,7 @@ int TCPServer::listen() {
 }
 
 
-void TCPServer::notifyHandlerExit(ConnectionHandler* connection) {
+void TCPServer::destroyHandler(ConnectionHandler* connection) {
 	vector<ConnectionHandler*>::iterator it;
 
 	for (it = this->connections.begin(); it != this->connections.end(); it++) {

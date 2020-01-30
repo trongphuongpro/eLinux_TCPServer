@@ -1,7 +1,7 @@
 /**
  * @file connectionhandler.cpp
- * @brief 
- * @author Nguyen Trong Phuong
+ * @brief Handler for multithreaded connection.
+ * @author Nguyen Trong Phuong (aka trongphuongpro)
  * @date 2020 Jan 30
  */
 
@@ -93,13 +93,12 @@ void ConnectionHandler::threadLoop() {
 	while (this->isRunning) {
 		receive(msg);
 		printf("[Receive] %s\n", msg.c_str());
-		msg = "Welcome to BBB server";
-		send(msg);
+		send("Welcome to BBB server");
 
 		stop();
 	}
 
-	this->parent->notifyHandlerExit(this);
+	this->parent->destroyHandler(this);
 }
 
 } /* namespace eLinux */
