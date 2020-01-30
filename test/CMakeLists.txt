@@ -10,7 +10,9 @@ set(CMAKE_C_COMPILER arm-linux-gcc)
 
 set(TARGET testbench)
 
-add_executable(${TARGET} test.cpp ../src/tcpserver.cpp)
+add_executable(${TARGET} test.cpp ../src/tcpserver.cpp 
+								../src/connectionhandler.cpp)
+target_link_libraries(${TARGET} ${CMAKE_THREAD_LIBS_INIT})
 target_include_directories(${TARGET} PUBLIC ../include)
 
 #-----------------------------------------------------------------------------#

@@ -13,6 +13,8 @@
 #include <sys/types.h>
 #include <netinet/in.h>
 #include <string>
+#include <vector>
+#include "connectionhandler.h"
 
 namespace eLinux {
 
@@ -21,17 +23,18 @@ public:
 	TCPServer(int port);
 	~TCPServer();
 
-	virtual int send(std::string message);
 	virtual int listen();
-	virtual int receive(std::string& message, uint16_t len=1024);
+	virtual void close();
+	virtual void notifyHandlerExit(ConnectionHandler* connection);
 
 private:
+	int open();
+
 	int port;
 	int socketfd;
-	int clientSocketfd;
-	struct sockaddr_in serverAddress;
-	struct sockaddr_in clientAddress;
+	struct sockaddr_in server;
 	bool isConnected;
+	std::vector<ConnectionHandler*> connections;
 };
 
 } /* namespace eLinux */

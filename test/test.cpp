@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 #include "tcpserver.h"
 
 
@@ -11,13 +12,5 @@ int main() {
 	string msg;
 	TCPServer server(1234);
 
-	do {
-		server.listen();
-		
-		server.receive(msg);
-		printf("[Receive] %s\n", msg.c_str());
-
-		msg = "Welcome to BBB server";
-		server.send(msg);
-	} while (1);
+	server.listen();
 }
