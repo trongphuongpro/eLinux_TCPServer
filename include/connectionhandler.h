@@ -85,6 +85,10 @@ public:
 	virtual int receive(std::string& message, uint16_t len=1024);
 
 protected:
+
+	/**
+	 * @brief Define how server responds to client.
+	 */
 	virtual void threadLoop();
 
 private:
@@ -94,7 +98,7 @@ private:
 	TCPServer *parent;
 	bool isRunning;
 
-	static void *threadHelper(void *hander);
+	static void *threadHelper(void *handler);
 };
 
 } /* namespace eLinux */
