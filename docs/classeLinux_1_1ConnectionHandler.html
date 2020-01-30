@@ -66,8 +66,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">eLinux::ConnectionHandler Class Reference</div>  </div>
 </div><!--header-->
@@ -80,9 +79,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a47babf11e624394c7759aeb5b7561dcb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeLinux_1_1ConnectionHandler.html#a47babf11e624394c7759aeb5b7561dcb">ConnectionHandler</a> (<a class="el" href="classeLinux_1_1TCPServer.html">TCPServer</a> *parent, sockaddr_in *client, int clientSocketfd)</td></tr>
-<tr class="memdesc:a47babf11e624394c7759aeb5b7561dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classeLinux_1_1ConnectionHandler.html#a47babf11e624394c7759aeb5b7561dcb">More...</a><br /></td></tr>
-<tr class="separator:a47babf11e624394c7759aeb5b7561dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0afa99ef45d9097c506ba608f86bd61"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeLinux_1_1ConnectionHandler.html#ab0afa99ef45d9097c506ba608f86bd61">ConnectionHandler</a> (<a class="el" href="classeLinux_1_1TCPServer.html">TCPServer</a> *parent, sockaddr_in *client, int clientSocketfd, <a class="el" href="namespaceeLinux.html#a97f3b93111de465e447374943fac83f0">CallbackType</a> callback)</td></tr>
+<tr class="memdesc:ab0afa99ef45d9097c506ba608f86bd61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classeLinux_1_1ConnectionHandler.html#ab0afa99ef45d9097c506ba608f86bd61">More...</a><br /></td></tr>
+<tr class="separator:ab0afa99ef45d9097c506ba608f86bd61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a885f53a205d1dfc5a4acc67537f99bbc"><td class="memItemLeft" align="right" valign="top"><a id="a885f53a205d1dfc5a4acc67537f99bbc"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeLinux_1_1ConnectionHandler.html#a885f53a205d1dfc5a4acc67537f99bbc">~ConnectionHandler</a> ()</td></tr>
 <tr class="memdesc:a885f53a205d1dfc5a4acc67537f99bbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
@@ -104,19 +103,18 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a6678ab67e3e225a2fcc1cd583f27f856"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeLinux_1_1ConnectionHandler.html#a6678ab67e3e225a2fcc1cd583f27f856">receive</a> (std::string &amp;message, uint16_t len=1024)</td></tr>
 <tr class="memdesc:a6678ab67e3e225a2fcc1cd583f27f856"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive a message from client.  <a href="classeLinux_1_1ConnectionHandler.html#a6678ab67e3e225a2fcc1cd583f27f856">More...</a><br /></td></tr>
 <tr class="separator:a6678ab67e3e225a2fcc1cd583f27f856"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a4bd1bbdc8554883939ae22a3cad67fcf"><td class="memItemLeft" align="right" valign="top"><a id="a4bd1bbdc8554883939ae22a3cad67fcf"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeLinux_1_1ConnectionHandler.html#a4bd1bbdc8554883939ae22a3cad67fcf">threadLoop</a> ()</td></tr>
-<tr class="memdesc:a4bd1bbdc8554883939ae22a3cad67fcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define how server responds to client. <br /></td></tr>
-<tr class="separator:a4bd1bbdc8554883939ae22a3cad67fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20ad3d385d39b792e9043c4960b4e5a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeLinux_1_1ConnectionHandler.html#a20ad3d385d39b792e9043c4960b4e5a1">isRunning</a> ()</td></tr>
+<tr class="memdesc:a20ad3d385d39b792e9043c4960b4e5a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if thread is running.  <a href="classeLinux_1_1ConnectionHandler.html#a20ad3d385d39b792e9043c4960b4e5a1">More...</a><br /></td></tr>
+<tr class="separator:a20ad3d385d39b792e9043c4960b4e5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa63a8215e5fa66fd5f7db3d950bf2767"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classeLinux_1_1TCPServer.html">TCPServer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeLinux_1_1ConnectionHandler.html#aa63a8215e5fa66fd5f7db3d950bf2767">getParent</a> ()</td></tr>
+<tr class="memdesc:aa63a8215e5fa66fd5f7db3d950bf2767"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pointer to <a class="el" href="classeLinux_1_1TCPServer.html" title="Class TCPserver used for creating TCP Server/.">TCPServer</a> instance that created this <a class="el" href="classeLinux_1_1ConnectionHandler.html" title="Class ConnectionHandler is used to handle a connection to server.">ConnectionHandler</a> instance.  <a href="classeLinux_1_1ConnectionHandler.html#aa63a8215e5fa66fd5f7db3d950bf2767">More...</a><br /></td></tr>
+<tr class="separator:aa63a8215e5fa66fd5f7db3d950bf2767"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class <a class="el" href="classeLinux_1_1ConnectionHandler.html" title="Class ConnectionHandler is used to handle a connection to server.">ConnectionHandler</a> is used to handle a connection to server. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a47babf11e624394c7759aeb5b7561dcb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47babf11e624394c7759aeb5b7561dcb">&#9670;&nbsp;</a></span>ConnectionHandler()</h2>
+<a id="ab0afa99ef45d9097c506ba608f86bd61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0afa99ef45d9097c506ba608f86bd61">&#9670;&nbsp;</a></span>ConnectionHandler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -137,7 +135,13 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>clientSocketfd</em>&#160;</td>
+          <td class="paramname"><em>clientSocketfd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceeLinux.html#a97f3b93111de465e447374943fac83f0">CallbackType</a>&#160;</td>
+          <td class="paramname"><em>callback</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -160,6 +164,46 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa63a8215e5fa66fd5f7db3d950bf2767"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa63a8215e5fa66fd5f7db3d950bf2767">&#9670;&nbsp;</a></span>getParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classeLinux_1_1TCPServer.html">TCPServer</a> * eLinux::ConnectionHandler::getParent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the pointer to <a class="el" href="classeLinux_1_1TCPServer.html" title="Class TCPserver used for creating TCP Server/.">TCPServer</a> instance that created this <a class="el" href="classeLinux_1_1ConnectionHandler.html" title="Class ConnectionHandler is used to handle a connection to server.">ConnectionHandler</a> instance. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classeLinux_1_1TCPServer.html" title="Class TCPserver used for creating TCP Server/.">TCPServer</a> pointer. </dd></dl>
+
+</div>
+</div>
+<a id="a20ad3d385d39b792e9043c4960b4e5a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20ad3d385d39b792e9043c4960b4e5a1">&#9670;&nbsp;</a></span>isRunning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool eLinux::ConnectionHandler::isRunning </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if thread is running. </p>
+<dl class="section return"><dt>Returns</dt><dd>true/false. </dd></dl>
+
+</div>
+</div>
 <a id="a6678ab67e3e225a2fcc1cd583f27f856"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6678ab67e3e225a2fcc1cd583f27f856">&#9670;&nbsp;</a></span>receive()</h2>
 

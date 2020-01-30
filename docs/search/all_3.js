@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['listen_6',['listen',['../classeLinux_1_1TCPServer.html#ae78ab800443a27ac5948df9bf8e037af',1,'eLinux::TCPServer']]]
+  ['getparent_7',['getParent',['../classeLinux_1_1ConnectionHandler.html#aa63a8215e5fa66fd5f7db3d950bf2767',1,'eLinux::ConnectionHandler']]]
 ];

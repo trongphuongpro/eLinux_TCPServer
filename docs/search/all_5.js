@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['send_8',['send',['../classeLinux_1_1ConnectionHandler.html#ad6202fa5b2f2cd146387a81c94139131',1,'eLinux::ConnectionHandler']]],
-  ['start_9',['start',['../classeLinux_1_1ConnectionHandler.html#acc443978153f45db54200a54eb15882d',1,'eLinux::ConnectionHandler']]],
-  ['stop_10',['stop',['../classeLinux_1_1ConnectionHandler.html#aea94ad402cb25983de7bf654bae3c708',1,'eLinux::ConnectionHandler']]]
+  ['listen_9',['listen',['../classeLinux_1_1TCPServer.html#a2dccb8aab53efd9ab518dbd4a6e66bd2',1,'eLinux::TCPServer']]]
 ];

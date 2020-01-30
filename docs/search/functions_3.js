@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['receive_30',['receive',['../classeLinux_1_1ConnectionHandler.html#a6678ab67e3e225a2fcc1cd583f27f856',1,'eLinux::ConnectionHandler']]]
+  ['isrunning_32',['isRunning',['../classeLinux_1_1ConnectionHandler.html#a20ad3d385d39b792e9043c4960b4e5a1',1,'eLinux::ConnectionHandler']]]
 ];

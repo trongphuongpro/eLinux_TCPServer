@@ -21,6 +21,12 @@ namespace eLinux {
 
 
 /**
+ * @brief pointer type for callback function
+ */
+typedef void (*CallbackType)(void*);
+
+
+/**
  * @brief class TCPServer
  *
  * Declaration.
@@ -40,7 +46,10 @@ public:
 	 * @param [in] client pointer to struct sockaddr_in contaning IPv4 socket address.
 	 * @param [in] clientSocketfd file descriptor to client's socket.
 	 */
-	ConnectionHandler(TCPServer* parent, sockaddr_in* client, int clientSocketfd);
+	ConnectionHandler(TCPServer* parent, 
+					sockaddr_in* client, 
+					int clientSocketfd,
+					CallbackType callback);
 
 
 	/**
@@ -84,19 +93,29 @@ public:
 	 */
 	virtual int receive(std::string& message, uint16_t len=1024);
 
-protected:
 
 	/**
-	 * @brief Define how server responds to client.
+	 * @brief Check if thread is running.
+	 * @return true/false.
 	 */
-	virtual void threadLoop();
+	bool isRunning();
+
+
+	/**
+	 * @brief Get the pointer to TCPServer instance 
+	 * that created this ConnectionHandler instance.
+	 * @return TCPServer pointer.
+	 */
+	TCPServer* getParent();
+	
 
 private:
 	sockaddr_in *client;
 	int clientSocketfd;
 	pthread_t thread;
 	TCPServer *parent;
-	bool isRunning;
+	bool __isRunning;
+	CallbackType callback;
 
 	static void *threadHelper(void *handler);
 };

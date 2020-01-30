@@ -81,61 +81,73 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespaceeLinux.html">   20</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceeLinux.html">eLinux</a> {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span><a class="code" href="classeLinux_1_1TCPServer.html">TCPServer</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classeLinux_1_1ConnectionHandler.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeLinux_1_1ConnectionHandler.html">ConnectionHandler</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="namespaceeLinux.html#a97f3b93111de465e447374943fac83f0">   26</a></span>&#160;<span class="keyword">typedef</span> void (*<a class="code" href="namespaceeLinux.html#a97f3b93111de465e447374943fac83f0">CallbackType</a>)(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">class </span><a class="code" href="classeLinux_1_1TCPServer.html">TCPServer</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classeLinux_1_1ConnectionHandler.html#a47babf11e624394c7759aeb5b7561dcb">ConnectionHandler</a>(<a class="code" href="classeLinux_1_1TCPServer.html">TCPServer</a>* parent, sockaddr_in* client, <span class="keywordtype">int</span> clientSocketfd);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classeLinux_1_1ConnectionHandler.html#a885f53a205d1dfc5a4acc67537f99bbc">~ConnectionHandler</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classeLinux_1_1ConnectionHandler.html#acc443978153f45db54200a54eb15882d">start</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classeLinux_1_1ConnectionHandler.html#a9991c9024566e589de91d7a7549391a5">wait</a>();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classeLinux_1_1ConnectionHandler.html#aea94ad402cb25983de7bf654bae3c708">stop</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classeLinux_1_1ConnectionHandler.html#ad6202fa5b2f2cd146387a81c94139131">send</a>(std::string message);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classeLinux_1_1ConnectionHandler.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeLinux_1_1ConnectionHandler.html">ConnectionHandler</a> {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classeLinux_1_1ConnectionHandler.html#ab0afa99ef45d9097c506ba608f86bd61">ConnectionHandler</a>(<a class="code" href="classeLinux_1_1TCPServer.html">TCPServer</a>* parent, </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    sockaddr_in* client, </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    <span class="keywordtype">int</span> clientSocketfd,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    <a class="code" href="namespaceeLinux.html#a97f3b93111de465e447374943fac83f0">CallbackType</a> callback);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classeLinux_1_1ConnectionHandler.html#a885f53a205d1dfc5a4acc67537f99bbc">~ConnectionHandler</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classeLinux_1_1ConnectionHandler.html#acc443978153f45db54200a54eb15882d">start</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classeLinux_1_1ConnectionHandler.html#a9991c9024566e589de91d7a7549391a5">wait</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classeLinux_1_1ConnectionHandler.html#aea94ad402cb25983de7bf654bae3c708">stop</a>();</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classeLinux_1_1ConnectionHandler.html#a6678ab67e3e225a2fcc1cd583f27f856">receive</a>(std::string&amp; message, uint16_t len=1024);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classeLinux_1_1ConnectionHandler.html#ad6202fa5b2f2cd146387a81c94139131">send</a>(std::string message);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classeLinux_1_1ConnectionHandler.html#a4bd1bbdc8554883939ae22a3cad67fcf">threadLoop</a>();</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    sockaddr_in *client;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">int</span> clientSocketfd;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    pthread_t thread;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="classeLinux_1_1TCPServer.html">TCPServer</a> *parent;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">bool</span> isRunning;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> *threadHelper(<span class="keywordtype">void</span> *handler);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classeLinux_1_1ConnectionHandler.html#a6678ab67e3e225a2fcc1cd583f27f856">receive</a>(std::string&amp; message, uint16_t len=1024);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classeLinux_1_1ConnectionHandler.html#a20ad3d385d39b792e9043c4960b4e5a1">isRunning</a>();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;} <span class="comment">/* namespace eLinux */</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __CONNECTIONHANDLER__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="classeLinux_1_1TCPServer.html">TCPServer</a>* <a class="code" href="classeLinux_1_1ConnectionHandler.html#aa63a8215e5fa66fd5f7db3d950bf2767">getParent</a>();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    sockaddr_in *client;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">int</span> clientSocketfd;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    pthread_t thread;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="classeLinux_1_1TCPServer.html">TCPServer</a> *parent;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">bool</span> __isRunning;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="namespaceeLinux.html#a97f3b93111de465e447374943fac83f0">CallbackType</a> callback;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> *threadHelper(<span class="keywordtype">void</span> *handler);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;};</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;} <span class="comment">/* namespace eLinux */</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __CONNECTIONHANDLER__ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html_a6678ab67e3e225a2fcc1cd583f27f856"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html#a6678ab67e3e225a2fcc1cd583f27f856">eLinux::ConnectionHandler::receive</a></div><div class="ttdeci">virtual int receive(std::string &amp;message, uint16_t len=1024)</div><div class="ttdoc">Receive a message from client.</div><div class="ttdef"><b>Definition:</b> connectionhandler.cpp:70</div></div>
-<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html_a4bd1bbdc8554883939ae22a3cad67fcf"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html#a4bd1bbdc8554883939ae22a3cad67fcf">eLinux::ConnectionHandler::threadLoop</a></div><div class="ttdeci">virtual void threadLoop()</div><div class="ttdoc">Define how server responds to client.</div><div class="ttdef"><b>Definition:</b> connectionhandler.cpp:90</div></div>
-<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html_a47babf11e624394c7759aeb5b7561dcb"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html#a47babf11e624394c7759aeb5b7561dcb">eLinux::ConnectionHandler::ConnectionHandler</a></div><div class="ttdeci">ConnectionHandler(TCPServer *parent, sockaddr_in *client, int clientSocketfd)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> connectionhandler.cpp:22</div></div>
-<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html_acc443978153f45db54200a54eb15882d"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html#acc443978153f45db54200a54eb15882d">eLinux::ConnectionHandler::start</a></div><div class="ttdeci">virtual int start()</div><div class="ttdoc">Start new thread to handle new connection.</div><div class="ttdef"><b>Definition:</b> connectionhandler.cpp:38</div></div>
+<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html_a6678ab67e3e225a2fcc1cd583f27f856"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html#a6678ab67e3e225a2fcc1cd583f27f856">eLinux::ConnectionHandler::receive</a></div><div class="ttdeci">virtual int receive(std::string &amp;message, uint16_t len=1024)</div><div class="ttdoc">Receive a message from client.</div><div class="ttdef"><b>Definition:</b> connectionhandler.cpp:71</div></div>
+<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html_a20ad3d385d39b792e9043c4960b4e5a1"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html#a20ad3d385d39b792e9043c4960b4e5a1">eLinux::ConnectionHandler::isRunning</a></div><div class="ttdeci">bool isRunning()</div><div class="ttdoc">Check if thread is running.</div><div class="ttdef"><b>Definition:</b> connectionhandler.cpp:91</div></div>
+<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html_ab0afa99ef45d9097c506ba608f86bd61"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html#ab0afa99ef45d9097c506ba608f86bd61">eLinux::ConnectionHandler::ConnectionHandler</a></div><div class="ttdeci">ConnectionHandler(TCPServer *parent, sockaddr_in *client, int clientSocketfd, CallbackType callback)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> connectionhandler.cpp:22</div></div>
+<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html_acc443978153f45db54200a54eb15882d"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html#acc443978153f45db54200a54eb15882d">eLinux::ConnectionHandler::start</a></div><div class="ttdeci">virtual int start()</div><div class="ttdoc">Start new thread to handle new connection.</div><div class="ttdef"><b>Definition:</b> connectionhandler.cpp:39</div></div>
 <div class="ttc" id="anamespaceeLinux_html"><div class="ttname"><a href="namespaceeLinux.html">eLinux</a></div><div class="ttdoc">namespace eLinux</div><div class="ttdef"><b>Definition:</b> connectionhandler.h:20</div></div>
-<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html">eLinux::ConnectionHandler</a></div><div class="ttdoc">Class ConnectionHandler is used to handle a connection to server.</div><div class="ttdef"><b>Definition:</b> connectionhandler.h:34</div></div>
-<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html_aea94ad402cb25983de7bf654bae3c708"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html#aea94ad402cb25983de7bf654bae3c708">eLinux::ConnectionHandler::stop</a></div><div class="ttdeci">virtual void stop()</div><div class="ttdoc">Terminate running thread.</div><div class="ttdef"><b>Definition:</b> connectionhandler.cpp:48</div></div>
-<div class="ttc" id="aclasseLinux_1_1TCPServer_html"><div class="ttname"><a href="classeLinux_1_1TCPServer.html">eLinux::TCPServer</a></div><div class="ttdoc">Class TCPserver used for creating TCP Server/.</div><div class="ttdef"><b>Definition:</b> tcpserver.h:28</div></div>
-<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html_ad6202fa5b2f2cd146387a81c94139131"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html#ad6202fa5b2f2cd146387a81c94139131">eLinux::ConnectionHandler::send</a></div><div class="ttdeci">virtual int send(std::string message)</div><div class="ttdoc">Send a message to client.</div><div class="ttdef"><b>Definition:</b> connectionhandler.cpp:58</div></div>
-<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html_a885f53a205d1dfc5a4acc67537f99bbc"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html#a885f53a205d1dfc5a4acc67537f99bbc">eLinux::ConnectionHandler::~ConnectionHandler</a></div><div class="ttdeci">virtual ~ConnectionHandler()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> connectionhandler.cpp:33</div></div>
-<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html_a9991c9024566e589de91d7a7549391a5"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html#a9991c9024566e589de91d7a7549391a5">eLinux::ConnectionHandler::wait</a></div><div class="ttdeci">virtual void wait()</div><div class="ttdoc">Wait until thread terminated.</div><div class="ttdef"><b>Definition:</b> connectionhandler.cpp:53</div></div>
+<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html">eLinux::ConnectionHandler</a></div><div class="ttdoc">Class ConnectionHandler is used to handle a connection to server.</div><div class="ttdef"><b>Definition:</b> connectionhandler.h:40</div></div>
+<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html_aa63a8215e5fa66fd5f7db3d950bf2767"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html#aa63a8215e5fa66fd5f7db3d950bf2767">eLinux::ConnectionHandler::getParent</a></div><div class="ttdeci">TCPServer * getParent()</div><div class="ttdoc">Get the pointer to TCPServer instance that created this ConnectionHandler instance.</div><div class="ttdef"><b>Definition:</b> connectionhandler.cpp:96</div></div>
+<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html_aea94ad402cb25983de7bf654bae3c708"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html#aea94ad402cb25983de7bf654bae3c708">eLinux::ConnectionHandler::stop</a></div><div class="ttdeci">virtual void stop()</div><div class="ttdoc">Terminate running thread.</div><div class="ttdef"><b>Definition:</b> connectionhandler.cpp:49</div></div>
+<div class="ttc" id="aclasseLinux_1_1TCPServer_html"><div class="ttname"><a href="classeLinux_1_1TCPServer.html">eLinux::TCPServer</a></div><div class="ttdoc">Class TCPserver used for creating TCP Server/.</div><div class="ttdef"><b>Definition:</b> tcpserver.h:34</div></div>
+<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html_ad6202fa5b2f2cd146387a81c94139131"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html#ad6202fa5b2f2cd146387a81c94139131">eLinux::ConnectionHandler::send</a></div><div class="ttdeci">virtual int send(std::string message)</div><div class="ttdoc">Send a message to client.</div><div class="ttdef"><b>Definition:</b> connectionhandler.cpp:59</div></div>
+<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html_a885f53a205d1dfc5a4acc67537f99bbc"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html#a885f53a205d1dfc5a4acc67537f99bbc">eLinux::ConnectionHandler::~ConnectionHandler</a></div><div class="ttdeci">virtual ~ConnectionHandler()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> connectionhandler.cpp:34</div></div>
+<div class="ttc" id="anamespaceeLinux_html_a97f3b93111de465e447374943fac83f0"><div class="ttname"><a href="namespaceeLinux.html#a97f3b93111de465e447374943fac83f0">eLinux::CallbackType</a></div><div class="ttdeci">void(* CallbackType)(void *)</div><div class="ttdoc">pointer type for callback function</div><div class="ttdef"><b>Definition:</b> connectionhandler.h:26</div></div>
+<div class="ttc" id="aclasseLinux_1_1ConnectionHandler_html_a9991c9024566e589de91d7a7549391a5"><div class="ttname"><a href="classeLinux_1_1ConnectionHandler.html#a9991c9024566e589de91d7a7549391a5">eLinux::ConnectionHandler::wait</a></div><div class="ttdeci">virtual void wait()</div><div class="ttdoc">Wait until thread terminated.</div><div class="ttdef"><b>Definition:</b> connectionhandler.cpp:54</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

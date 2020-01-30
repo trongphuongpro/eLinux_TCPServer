@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['wrapper_20class_20for_20tcp_2fipv4_20socket_20server_2e_15',['Wrapper class for TCP/IPv4 Socket Server.',['../index.html',1,'']]],
-  ['wait_16',['wait',['../classeLinux_1_1ConnectionHandler.html#a9991c9024566e589de91d7a7549391a5',1,'eLinux::ConnectionHandler']]]
+  ['send_11',['send',['../classeLinux_1_1ConnectionHandler.html#ad6202fa5b2f2cd146387a81c94139131',1,'eLinux::ConnectionHandler']]],
+  ['start_12',['start',['../classeLinux_1_1ConnectionHandler.html#acc443978153f45db54200a54eb15882d',1,'eLinux::ConnectionHandler']]],
+  ['stop_13',['stop',['../classeLinux_1_1ConnectionHandler.html#aea94ad402cb25983de7bf654bae3c708',1,'eLinux::ConnectionHandler']]]
 ];

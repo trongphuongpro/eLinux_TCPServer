@@ -1,11 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "cdelrstw~",
+  0: "cdegilrstw~",
   1: "ct",
   2: "e",
   3: "ct",
-  4: "cdlrstw~",
-  5: "w"
+  4: "cdgilrstw~",
+  5: "c",
+  6: "w"
 };
 
 var indexSectionNames =
@@ -15,7 +16,8 @@ var indexSectionNames =
   2: "namespaces",
   3: "files",
   4: "functions",
-  5: "pages"
+  5: "typedefs",
+  6: "pages"
 };
 
 var indexSectionLabels =
@@ -25,6 +27,7 @@ var indexSectionLabels =
   2: "Namespaces",
   3: "Files",
   4: "Functions",
-  5: "Pages"
+  5: "Typedefs",
+  6: "Pages"
 };
 

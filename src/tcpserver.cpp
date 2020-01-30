@@ -63,7 +63,7 @@ void TCPServer::close() {
 }
 
 
-int TCPServer::listen() {
+int TCPServer::listen(CallbackType callback) {
 	while (1) {
 		struct sockaddr_in *tempClient = new struct sockaddr_in;
 		socklen_t clientLength = sizeof(struct sockaddr_in);
@@ -79,7 +79,9 @@ int TCPServer::listen() {
 		else {
 			ConnectionHandler *conn = new ConnectionHandler(this, 
 															tempClient, 
-															tempClientSocketfd);
+															tempClientSocketfd,
+															callback);
+
 			this->connections.push_back(conn);
 			conn->start();
 		}

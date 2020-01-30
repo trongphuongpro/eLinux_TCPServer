@@ -21,12 +21,13 @@ namespace eLinux {
 
 ConnectionHandler::ConnectionHandler(TCPServer* parent,
 									sockaddr_in *client,
-									int clientSocketfd)
+									int clientSocketfd,
+									CallbackType callback): parent{parent}
 {
-	this->parent = parent;
 	this->client = client;
 	this->clientSocketfd = clientSocketfd;
-	this->isRunning = false;
+	this->__isRunning = false;
+	this->callback = callback;
 }
 
 
@@ -36,7 +37,7 @@ ConnectionHandler::~ConnectionHandler() {
 
 
 int ConnectionHandler::start() {
-	this->isRunning = true;
+	this->__isRunning = true;
 	if (pthread_create(&this->thread, NULL, threadHelper, this) != 0) {
 		perror("ConnectionHandler: cannot create new thread.");
 		return -1;
@@ -46,7 +47,7 @@ int ConnectionHandler::start() {
 
 
 void ConnectionHandler::stop() {
-	this->isRunning = false;
+	this->__isRunning = false;
 }
 
 
@@ -63,7 +64,7 @@ int ConnectionHandler::send(string message) {
 		perror("ConnectionHandler: error writing to server socket");
 		return -1;
 	}
-	return 0;
+	return n;
 }
 
 
@@ -77,28 +78,23 @@ int ConnectionHandler::receive(string& message, uint16_t len) {
 	}
 
 	message = string(buffer);
+	return n;
+}
+
+
+void* ConnectionHandler::threadHelper(void* handler) {
+	((ConnectionHandler*)handler)->callback(handler);
 	return 0;
 }
 
 
-void *ConnectionHandler::threadHelper(void* handler) {
-	((ConnectionHandler*)handler)->threadLoop();
-	return 0;
+bool ConnectionHandler::isRunning() {
+	return this->__isRunning;
 }
 
 
-void ConnectionHandler::threadLoop() {
-	string msg;
-
-	while (this->isRunning) {
-		receive(msg);
-		printf("[Receive] %s\n", msg.c_str());
-		send("Welcome to BBB server");
-
-		stop();
-	}
-
-	this->parent->destroyHandler(this);
+TCPServer* ConnectionHandler::getParent() {
+	return this->parent;
 }
 
 } /* namespace eLinux */

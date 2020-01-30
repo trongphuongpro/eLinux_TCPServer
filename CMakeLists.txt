@@ -8,14 +8,11 @@ set(CMAKE_CXX_COMPILER arm-linux-g++)
 set(CMAKE_C_COMPILER arm-linux-gcc)
 #-----------------------------------------------------------------------------#
 
-add_subdirectory()
+set(TARGET tcpserver)
 
-set(TARGET **target filename**)
-
-add_executable(${TARGET} **source files**)
-add_library(${TARGET} STATIC **source files**)
-target_link_libraries(${TARGET} **lib**)
-target_include_directories(${TARGET} PUBLIC **dirs**)
+add_library(${TARGET} STATIC src/tcpserver src/connectionhandler.cpp)
+target_link_libraries(${TARGET} ${CMAKE_THREAD_LIBS_INIT})
+target_include_directories(${TARGET} PUBLIC include)
 
 #-----------------------------------------------------------------------------#
 target_compile_options(${TARGET} PUBLIC -std=gnu++11

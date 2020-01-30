@@ -23,6 +23,12 @@
 namespace eLinux {
 
 /**
+ * @brief pointer type for callback function
+ */
+typedef void (*CallbackType)(void*);
+
+
+/**
  * @brief Class TCPserver used for creating TCP Server/
  */
 class TCPServer {
@@ -45,7 +51,7 @@ public:
 	 * @brief Wait for new connection.
 	 * @return -1:failed.
 	 */
-	virtual int listen();
+	virtual int listen(CallbackType callback);
 
 
 	/**
