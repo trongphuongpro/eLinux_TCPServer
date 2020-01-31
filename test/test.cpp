@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <errno.h>
 #include "tcpserver.h"
 
 
@@ -11,21 +12,26 @@ void respond(void *arg) {
 	printf("conn: %p\n", arg);
 	ConnectionHandler* conn = static_cast<ConnectionHandler*>(arg);
 	
-	string msg;
+	string msg = "OK";
 	int ret;
 
 	while (conn->isRunning()) {
-		msg = "Welcome to BBB server";
-		ret = conn->send(msg);
-		
-		if ((ret = conn->receive(msg)) > 0) {
+
+		ret = conn->receive(msg);
+		printf("recv ret: %d, error: %d\n", ret, errno);
+
+		if (ret > 0) {
 			printf("[Receive] %s\n", msg.c_str());
 		}
 		else {
+			printf("Client has disconnected.\n");
 			break;
 		}
 
-		//conn->stop();
+		ret = conn->send(msg);
+		printf("send ret: %d, error: %d\n", ret, errno);
+
+		puts("-------------------------------");
 	}
 
 	conn->getParent()->destroyHandler(conn);

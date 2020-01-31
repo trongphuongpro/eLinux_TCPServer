@@ -32,6 +32,7 @@ ConnectionHandler::ConnectionHandler(TCPServer* parent,
 
 
 ConnectionHandler::~ConnectionHandler() {
+	::close(this->clientSocketfd);
 	delete this->client;
 }
 
