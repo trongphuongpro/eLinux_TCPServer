@@ -47,7 +47,7 @@ int TCPServer::open() {
 	server.sin_port = htons(this->port);
 
 	if (bind(this->socketfd, (struct sockaddr*)&server,
-							sizeof(struct sockaddr)) < 0) {
+							sizeof(struct sockaddr_in)) < 0) {
 		perror("TCPServer: error on binding the socket");
 		return -1;
 	}
